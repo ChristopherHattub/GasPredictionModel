@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <h1>Visual Demo 3 Dashboard</h1>
+
+
+
+
+
+
+
+  <button class="buttons" onclick="toggelData(1)">Average Temp</button>
+  <button class="buttons" onclick="toggelData(2)">Low Temp</button>
+  <button class="buttons" onclick="toggelData(3)">High Temp</button>
+  <button class="buttons" onclick="clearWeather()">Clear</button>
+
+
+  <label for="userid">UserId:</label>
+
+  <select id="userid" onchange="showYears(userid.value);loadData(year.value,userid.value)">
+    <option value=110>110</option>
+    <option value=139>139</option>
+    <option value=140>140</option>
+    <option value=141>141</option>
+    <option value=150>150</option>
+    <option value=164>164</option>
+    <option value=165>165</option>
+    <option value=171>171</option>
+    <option value=175>175</option>
+    <option value=182>182</option>
+    <option value=194>194</option>
+    <option value=200>200</option>
+    <option value=217>217</option>
+    <option value=220>220</option>
+    <option value=221>221</option>
+    <option value=225>225</option>
+    <option value=231>231</option>
+    <option value=235>235</option>
+    <option value=243>243</option>
+    <option value=225>225</option>
+    <option value=225>225</option>
+    <option value=999>999</option>
+
+  </select>
+  <label for="year">Year:</label>
+  <select id="year" onchange="loadData(year.value,userid.value)">
+    <option value="Test">Test</option>
+  </select>
+
+  <div class="chart-container" style="position: relative; height:40vh; width:90vw">
+    <canvas id="myChart"></canvas>
+  </div>
+
+  <!-- pie chart below -->
+
+  <div class="chart-container2" style="position: relative; height:44vh; width:44vw">
+    <canvas class="chart" id="doughnut-chart"></canvas>
+  </div>
+
+  <div class="chart-container3" style="position: relative; height:44vh; width:44vw">
+    <canvas id="bar-chart"></canvas>
+  </div>
+  <!-- pie chart above -->
+
+
+
+
+
+  <script src="multiple.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="main.js"></script>
+
+</body>
+
+</html>
