@@ -1,0 +1,146 @@
+/* Define Color Palette */
+:root {
+    --primary-color: #2a3d66; /* Dark blue */
+    --secondary-color: #4b6587; /* Light blue */
+    --accent-color: #6a89cc; /* Subtle green or purple */
+    --text-color: #f5f6fa; /* White */
+    --background-color: #1e272e; /* Gray */
+}
+
+/* Typography */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+/* Layout and Grid System */
+.container {
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    padding: 15px;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: var(--primary-color);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+    .navbar a {
+        float: left;
+        display: block;
+        color: var(--text-color);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+        .navbar a:hover {
+            background-color: var(--secondary-color);
+            color: var(--accent-color);
+        }
+
+/* Homepage Design */
+.hero-section {
+    background-image: url('banner-image.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* Personal Projects Page */
+.project-card {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+    .project-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+/* Resume Page */
+.timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+    .timeline:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: var(--primary-color);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+.timeline-item {
+    padding: 20px;
+    position: relative;
+    width: 50%;
+    left: 50%;
+}
+
+/* Toolbox Page */
+.toolbox-item {
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    transition: background-color 0.3s;
+}
+
+    .toolbox-item:hover {
+        background-color: var(--accent-color);
+    }
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Animations and Transitions */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
